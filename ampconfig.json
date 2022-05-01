@@ -1,0 +1,19 @@
+{
+  "dataServiceGeneratorVersion": "0.12.6",
+  "appInfo": {
+    "name": "Sample app",
+    "description": "Sample application for e-commerce",
+    "version": "b9c6ezic",
+    "id": "cl2mk0zz3104651801s6exoap0ga",
+    "url": "https://app.amplication.com/cl2mk0zz3104651801s6exoap0ga",
+    "settings": {
+      "dbHost": "localhost",
+      "dbName": "",
+      "dbPassword": "admin",
+      "dbPort": 5432,
+      "dbUser": "admin",
+      "appId": "cl2mk0zz3104651801s6exoap0ga",
+      "authProvider": "Jwt"
+    }
+  }
+}
