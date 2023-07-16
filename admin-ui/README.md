@@ -1,49 +1,47 @@
-# Amplication
+<p align="right">
+  <a href="https://amplication.com" target="_blank">
+    <img alt="amplication-logo" height="70" alt="Amplication Logo" src="https://amplication.com/images/amplication-logo-purple.svg"/>
+  </a>
+</p>
 
-This app was generated with Amplication.
-You can learn more in the [Amplication documentation](https://docs.amplication.com/guides/getting-started).
+# Introduction
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), and built with [react-admin](https://marmelab.com/react-admin/)
+This service was generated with Amplication. It serves as the client-side for the generated server component. The client-side consist of a React application with ready-made forms for creating and editing the different data models of the application. It is pre-conffigured to work with the server and comes with the boilerplate and foundation for the client - i.e., routing, navigation, authentication, premissions, menu, breadcrumbs, error handling and much more. Additional information about the admin component and the architecture around it, can be found on the [documentation](https://docs.amplication.com/guides/getting-started) site. This side of the generated project was bootstrapped with [create-react-app](https://github.com/facebook/create-react-app) and built with [react-admin](https://marmelab.com/react-admin/).
 
-## Available Scripts
 
-In the project directory, you can run:
+<p align="center">
+  <img src="https://d33wubrfki0l68.cloudfront.net/2615bedd21c48089ab38a099bad9638b28879511/091b4/assets/images/admin-ui-9b6590728393d532ad798e9dc14138ac.png" width="700px">
+</p>
 
-### `yarn start`
+# Getting started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Step 1: Configuration
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Configuration for the client component can be provided through the use of environment variables. These can be passed to the application via the use of the `.env` file in the base directory of the generated service. Below a table can be found which show the different variables that can be passed. These values are provided default values after generation, change them to the desired values.
 
-### `yarn test`
+| Variable             | Description                                      | Value                           |
+| -------------------- | ------------------------------------------------ |  ------------------------------ |
+| PORT                 | the port on which to run the client              | 3001                            |
+| REACT_APP_SERVER_URL | the url on which the server component is running | http://localhost:[server-port]  |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> **Note**
+> Amplication generates default values and stores them under the .env file. It is advised to use some form of secrets manager/vault solution when using in production. 
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Step 2: Scripts
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+After configuration of the client the next step would be to run the application. Before running the client side of the component, make sure that the different pre-requisites are met - i.e., npm, docker. Make sure that the server-side of the application is running.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```sh
+# installation of the dependencies
+$ npm install
 
-### `yarn eject`
+# starts the application in development mode - available by default under http://localhost:3001 with a pre-configured user with the username "admin" and password "admin"
+$ npm run start
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# builds the application in production mode - available under 'build'
+$ npm run build
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+# removes the single build dependency from the project
+$ npm run eject
+```

@@ -1,17 +1,16 @@
-import { DocumentBuilder } from "@nestjs/swagger";
+import { DocumentBuilder, SwaggerCustomOptions } from "@nestjs/swagger";
 
 export const swaggerPath = "api";
 
 export const swaggerDocumentOptions = new DocumentBuilder()
   .setTitle("Sample app")
   .setDescription(
-    'Sample application for e-commerce\n\n## Congratulations! Your application is ready.\n  \nPlease note that all endpoints are secured with JWT Bearer authentication.\nBy default, your app comes with one user with the username "admin" and password "admin".\nLearn more in [our docs](https://docs.amplication.com)'
+    'Sample application for e-commerce\n\n## Congratulations! Your service resource is ready.\n  \nPlease note that all endpoints are secured with JWT Bearer authentication.\nBy default, your service resource comes with one user with the username "admin" and password "admin".\nLearn more in [our docs](https://docs.amplication.com)'
   )
-  .setVersion("b9c6ezic")
   .addBearerAuth()
   .build();
 
-export const swaggerSetupOptions = {
+export const swaggerSetupOptions: SwaggerCustomOptions = {
   swaggerOptions: {
     persistAuthorization: true,
   },
